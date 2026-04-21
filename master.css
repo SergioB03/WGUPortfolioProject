@@ -1,0 +1,581 @@
+/* =============================================
+   master.css — Sergio Banuelos Portfolio
+   ============================================= */
+
+/* Universal Selector */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* CSS Variables */
+:root {
+  --bg-primary: #0d1117;
+  --bg-secondary: #161b22;
+  --bg-card: #1c2333;
+  --accent-cyan: #00b4d8;
+  --accent-light: #90e0ef;
+  --text-primary: #e6edf3;
+  --text-muted: #8b949e;
+  --border-color: #30363d;
+  --font-heading: 'Raleway', sans-serif;
+  --font-body: 'Lato', sans-serif;
+  --font-mono: 'Source Code Pro', monospace;
+}
+
+/* =============================================
+   Element Selectors
+   ============================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: var(--text-primary);
+  line-height: 1.1;
+}
+
+h2 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--accent-cyan);
+}
+
+h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+}
+
+h4 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent-light);
+  margin-bottom: 0.3rem;
+}
+
+h5 {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+h6 {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+a {
+  color: var(--accent-cyan);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.4rem;
+  color: var(--text-primary);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 2rem 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+th {
+  background-color: var(--accent-cyan);
+  color: var(--bg-primary);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+td {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+caption {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+strong {
+  color: var(--accent-light);
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+mark {
+  background-color: rgba(0, 180, 216, 0.25);
+  color: var(--accent-cyan);
+  padding: 0 4px;
+  border-radius: 3px;
+}
+
+header {
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  padding: 2.5rem 2rem 2rem;
+}
+
+footer {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  padding: 1.5rem 2rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-top: 4rem;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+article {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.2rem;
+  transition: border-color 0.2s ease;
+}
+
+nav {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+form {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+input, textarea, select {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.6rem 0.9rem;
+  width: 100%;
+  margin-top: 0.3rem;
+  transition: border-color 0.2s ease;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+  font-size: 0.9rem;
+}
+
+audio, video {
+  display: block;
+  margin: 1rem 0;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+video {
+  width: 100%;
+  max-width: 640px;
+}
+
+img {
+  border-radius: 8px;
+  border: 2px solid var(--accent-cyan);
+}
+
+span {
+  font-family: var(--font-mono);
+}
+
+/* =============================================
+   Class Selectors
+   ============================================= */
+
+.hero-name {
+  font-size: 3.5rem;
+  background: linear-gradient(135deg, var(--text-primary), var(--accent-cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-family: var(--font-mono);
+  color: var(--accent-cyan);
+  font-size: 1rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+}
+
+.contact-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.contact-bar a {
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.skill-badge {
+  display: inline-block;
+  background-color: rgba(0, 180, 216, 0.12);
+  border: 1px solid rgba(0, 180, 216, 0.35);
+  color: var(--accent-cyan);
+  border-radius: 20px;
+  padding: 0.25rem 0.8rem;
+  font-size: 0.82rem;
+  font-family: var(--font-mono);
+  margin: 0.2rem;
+}
+
+.job-meta {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.date-badge {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  background-color: rgba(0, 180, 216, 0.1);
+  color: var(--accent-cyan);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--accent-cyan);
+  margin-bottom: 1.2rem;
+  display: block;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.radio-group {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+  width: auto;
+  margin: 0;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.media-section {
+  margin-bottom: 2rem;
+}
+
+.media-label {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--accent-light);
+  margin-bottom: 0.5rem;
+}
+
+.cover-letter-body {
+  max-width: 700px;
+  line-height: 1.9;
+}
+
+.goal-card {
+  background: linear-gradient(135deg, var(--bg-card), var(--bg-secondary));
+  border-left: 4px solid var(--accent-cyan);
+  border-radius: 0 8px 8px 0;
+  padding: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.page-intro {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 680px;
+  margin-bottom: 2rem;
+}
+
+/* =============================================
+   ID Selectors
+   ============================================= */
+
+#current-date {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+#site-footer-text {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+#profile-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  float: right;
+  margin-left: 2rem;
+}
+
+#page-tagline {
+  font-size: 1.3rem;
+  color: var(--text-muted);
+  font-weight: 300;
+  margin-top: 0.5rem;
+}
+
+/* =============================================
+   Descendant Selectors
+   ============================================= */
+
+nav a {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-muted);
+  padding: 0.4rem 1rem;
+  font-size: 0.88rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+header h1 {
+  margin-bottom: 0.2rem;
+}
+
+article ul {
+  list-style: disc;
+  padding-left: 1.4rem;
+}
+
+article li {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+form label {
+  font-family: var(--font-body);
+}
+
+table tr:nth-child(even) {
+  background-color: var(--bg-card);
+}
+
+/* =============================================
+   Pseudo-class Selectors
+   ============================================= */
+
+a:hover {
+  color: var(--accent-light);
+}
+
+nav a:hover {
+  background-color: var(--accent-cyan);
+  color: var(--bg-primary);
+  border-color: var(--accent-cyan);
+}
+
+nav a.active {
+  background-color: rgba(0, 180, 216, 0.15);
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+}
+
+article:hover {
+  border-color: var(--accent-cyan);
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.15);
+}
+
+.btn-submit:hover {
+  background-color: var(--accent-light);
+  color: var(--bg-primary);
+}
+
+tr:hover {
+  background-color: rgba(0, 180, 216, 0.05);
+}
+
+/* =============================================
+   List Style Properties
+   ============================================= */
+
+ul.skills-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.skills-list li::before {
+  content: "▸ ";
+  color: var(--accent-cyan);
+  font-size: 0.9rem;
+}
+
+ol.timeline {
+  list-style: decimal;
+  padding-left: 1.5rem;
+}
+
+ol.timeline li {
+  padding-left: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+
+ul.nav-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* =============================================
+   Font Properties
+   ============================================= */
+
+.mono-text {
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+}
+
+.display-text {
+  font-family: var(--font-heading);
+  font-weight: 800;
+}
+
+/* =============================================
+   Submit Button
+   ============================================= */
+
+.btn-submit {
+  background-color: var(--accent-cyan);
+  color: var(--bg-primary);
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 2rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 1rem;
+}
+
+/* =============================================
+   Responsive
+   ============================================= */
+
+@media (max-width: 640px) {
+  h1 { font-size: 2rem; }
+  .hero-name { font-size: 2.2rem; }
+  .two-col { grid-template-columns: 1fr; }
+  #profile-photo { float: none; margin: 0 0 1rem 0; }
+  nav { gap: 0.4rem; }
+}
